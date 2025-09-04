@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import { fileURLToPath } from "url"
 import * as path from 'path'
 import react from '@vitejs/plugin-react'
+import tailwind from "@tailwindcss/postcss"
+import autoprefixer from "autoprefixer";
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -9,6 +11,11 @@ const __dirname = path.dirname(__filename)
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  css: {
+    postcss: {
+      plugins: [tailwind(), autoprefixer()],
+    },
+  },
   resolve: {
     alias: [
       { find: '@app', replacement: path.resolve(__dirname, 'src/app/index') },
