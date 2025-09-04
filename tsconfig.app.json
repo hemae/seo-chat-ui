@@ -28,8 +28,11 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@app": [
+      "~app": [
         "src/app/index"
+      ],
+      "@app/*": [
+        "src/app/*"
       ],
       "@processes/*": [
         "src/processes/*"
