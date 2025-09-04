@@ -1,3 +1,4 @@
+import React from 'react'
 import {compose} from '../../../utils'
 import {withWrapper} from '../../hocs'
 

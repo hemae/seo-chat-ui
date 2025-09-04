@@ -1,5 +1,5 @@
-import React, {PropsWithChildren} from 'react'
+import React from 'react'
 
-export type ReactHOC<WrapperProps extends PropsWithChildren<{}> = PropsWithChildren<{}>> = <ComponentProps>(
-    Component: React.FC<PropsWithChildren<ComponentProps>>,
+export type ReactHOC<WrapperProps extends React.PropsWithChildren<{}> = React.PropsWithChildren<{}>> = <ComponentProps>(
+    Component: React.FC<React.PropsWithChildren<ComponentProps>>,
 ) => React.FC<ComponentProps & WrapperProps>
