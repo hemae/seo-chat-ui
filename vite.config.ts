@@ -18,7 +18,8 @@ export default defineConfig({
   },
   resolve: {
     alias: [
-      { find: '@app', replacement: path.resolve(__dirname, 'src/app/index') },
+      { find: '~app', replacement: path.resolve(__dirname, 'src/app/index') },
+      { find: '@app', replacement: path.resolve(__dirname, 'src/app') },
       { find: '@entities', replacement: path.resolve(__dirname, 'src/entities') },
       { find: '@features', replacement: path.resolve(__dirname, 'src/features') },
       { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
